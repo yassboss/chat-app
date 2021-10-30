@@ -44,14 +44,14 @@
   </div>
 </div>
 
-<div class="chat-footer">
+
+<%= form_with model: [@room,@message], class: 'form', local: true do |f| %>
   <div class="form-input">
-    <input class="input-message" type="text" placeholder="type a message">
+    <%= f.text_field :content, class: 'input-message', placeholder: 'type a message' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-    <input class="submit-btn" type="submit" value="送信">
-  </form>
-</div>
+    <%= f.submit '送信', class: 'submit-btn' %>
+<% end %>
