@@ -12,36 +12,7 @@
 </div>
 
 <div class="chat-main">
-  <div class="chat-content">
-    <div class="up-content">
-      <div class="message-name">
-        Tom
-      </div>
-      <div class="message-date">
-        2020/3/31(Wed) 17:21:30
-      </div>
-    </div>
-    <div class="down-content">
-      <div class="message-content">
-        おはよう
-      </div>
-    </div>
-  </div>
-    <div class="chat-content">
-    <div class="up-content">
-      <div class="message-name">
-        Sim
-      </div>
-      <div class="message-date">
-        2020/3/31(Wed) 17:21:30
-      </div >
-    </div>
-    <div class="down-content">
-      <div class="message-content">
-        おはよう
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 
